@@ -1,11 +1,11 @@
 package org.launchcode.techjobs.persistent.models;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 
 @Entity
 public class Job extends AbstractEntity{
 
-//    @Id
+    //    @Id
 //    @GeneratedValue
 //    private int id;
 
