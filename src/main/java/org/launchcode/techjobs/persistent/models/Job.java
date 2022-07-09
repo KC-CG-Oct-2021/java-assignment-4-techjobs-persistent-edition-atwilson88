@@ -3,15 +3,15 @@ package org.launchcode.techjobs.persistent.models;
 import javax.persistence.*;
 
 @Entity
-public class Job{
+public class Job extends AbstractEntity{
 
-    @Id
-    @GeneratedValue
-    private int id;
+//    @Id
+//    @GeneratedValue
+//    private int id;
 
-    private String name;
+//    private String name;
 
-    private String employer;
+    private String Employer;
     private String skills;
 
     public Job() {
@@ -19,26 +19,26 @@ public class Job{
 
     public Job(String anEmployer, String someSkills) {
         super();
-        this.employer = anEmployer;
+        this.Employer = anEmployer;
         this.skills = someSkills;
     }
 
     // Getters and setters.
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
     public String getEmployer() {
-        return employer;
+        return Employer;
     }
 
     public void setEmployer(String employer) {
-        this.employer = employer;
+        this.Employer = Employer;
     }
 
     public String getSkills() {
