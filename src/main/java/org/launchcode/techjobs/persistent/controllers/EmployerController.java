@@ -13,16 +13,19 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
+
 @Controller
-@RequestMapping("employers")
+@RequestMapping("employer")
 public class EmployerController {
 
     @Autowired
     private EmployerRepository employerRepository;
 
+
+    @GetMapping("")
     public String index(Model model) {
 
-        model.addAttribute("employers", "Company Names");
+        model.addAttribute("employers", employerRepository.findAll());
 
         return "employers/index";
     }
@@ -39,9 +42,10 @@ public class EmployerController {
                                     Errors errors, Model model) {
 
         if (errors.hasErrors()) {
-            model.addAttribute("employer", "Add Employer");
+            model.addAttribute("employer", "Employer");
             return "employers/add";
         }
+        employerRepository.save(newEmployer);
 
         return "redirect:";
     }

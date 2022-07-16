@@ -18,6 +18,8 @@ public class Employer extends AbstractEntity {
     public Employer() {
     }
 
+
+
     public String getLocation() {
         return location;
     }

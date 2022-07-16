@@ -11,16 +11,18 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.Optional;
 
+
 @Controller
-@RequestMapping("skills")
+@RequestMapping("skill")
 public class SkillController {
 
     @Autowired
     private SkillRepository skillRepository;
 
+    @GetMapping("")
     public String index(Model model) {
 
-        model.addAttribute("skills", "Skill Type");
+        model.addAttribute("skills", skillRepository.findAll());
 
         return "skills/index";
     }
@@ -40,6 +42,7 @@ public class SkillController {
             model.addAttribute("skill", "Add Skill");
             return "skills/add";
         }
+        skillRepository.save(newSkill);
 
         return "redirect:";
     }
