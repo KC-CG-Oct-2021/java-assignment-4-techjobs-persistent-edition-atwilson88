@@ -13,7 +13,7 @@ import java.util.Optional;
 
 
 @Controller
-@RequestMapping("skill")
+@RequestMapping("skills")
 public class SkillController {
 
     @Autowired
