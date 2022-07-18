@@ -46,10 +46,10 @@ public class JobData {
     }
 
     public static String getFieldValue(Job job, String fieldName){
-        String theValue;
+        String theValue = "";
         if (fieldName.equals("name")){
             theValue = job.getName();
-        } else if (fieldName.equals("employer")){
+        } else if (fieldName.equals("employer")) {
             theValue = job.getEmployer().toString();
         } else {
             theValue = job.getSkills().toString();
