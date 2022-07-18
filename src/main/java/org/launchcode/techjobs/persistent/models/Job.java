@@ -1,5 +1,7 @@
 package org.launchcode.techjobs.persistent.models;
 
+import org.springframework.web.bind.annotation.PostMapping;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -21,6 +23,7 @@ public class Job extends AbstractEntity{
 
     @ManyToMany
     private List<Skill> skills = new ArrayList<>();
+//        = new ArrayList<>();
 
     public Job() {
     }
@@ -30,6 +33,7 @@ public class Job extends AbstractEntity{
         this.employer = anEmployer;
         this.skills = someSkills;
     }
+
 
     // Getters and setters.
 

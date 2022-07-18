@@ -10,7 +10,7 @@ public class EmployerDTO {
     @NotNull
     private Employer employer;
 
-    @NotNull
+//    @NotNull
     private Skill skill;
 }
 
